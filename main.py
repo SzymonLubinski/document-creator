@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import transforms
 import seaborn as sns
-# from docx import Document
 # from docx.shared import Inches
 import docx
 from docx2pdf import convert
@@ -36,12 +35,10 @@ def data_preparation(dataframe):
 
 def set_area(a):
     r = average_price.swaplevel(0, 2)
-    # r = r.swaplevel(1, 2)
     r = r[region].loc[a]
     r = r.reset_index()
     r.rename(columns={region: 'average_price'}, inplace=True)
-    # print('set')
-    # print(r.head(7))
+    
     return r
 
 
@@ -52,8 +49,7 @@ def all_area():
     r = r.transpose()
     r = r.reset_index()
     r.rename(columns={region: 'average_price'}, inplace=True)
-    # print('all')
-    # print(r.head(7))
+    
     return r
 
 
@@ -286,4 +282,4 @@ p = report.add_paragraph(f'In the analyzed period, {text_value}')
 
 # Save document
 report.save('price report.docx')
-# convert('price report.docx', 'price report.pdf')
+convert('price report.docx', 'price report.pdf')

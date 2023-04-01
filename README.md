@@ -1,5 +1,5 @@
 # document-creator
-document-creator is a program that takes data from a csv file, writes a document and saves it as a pdf. In the documents we see text consistent with the data and two charts.
+document-creator is a program writted in Python that takes data from a csv file, writes a document and saves it as a pdf. In the documents we see text consistent with the data and two charts.
 
 # Program capabilities
 After starting the program, we can choose in a console the region and the size of the apartments. Document Creator will do the rest.
